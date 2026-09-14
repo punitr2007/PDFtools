@@ -1,0 +1,5 @@
+# Core Dependencies
+Pillow>=9.0.0
+
+# Optional / Extended OCR Support
+pytesseract>=0.3.10

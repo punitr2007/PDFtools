@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output PDF artifacts (keep raw images and code clean)
+*.pdf
+!example.pdf
+
+# Caches and virtual environments
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+.coverage
+
+# IDEs and OS metadata
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
