@@ -37,23 +37,23 @@
 
 ```mermaid
 flowchart TD
-    A[Unordered Image Batch\n.png, .jpg, .webp, .bmp] --> B[Image Preprocessing & Normalization]
-    B --> C[Tesseract OCR Engine]
-    C --> D[Multi-Tier Question Extractor]
+    A["Unordered Image Batch<br>(.png, .jpg, .webp, .bmp)"] --> B["Image Preprocessing & Normalization"]
+    B --> C["Tesseract OCR Engine"]
+    C --> D["Multi-Tier Question Extractor"]
     
-    subgraph Heuristic Matching
-        D --> E1[Tier 1: Top-5 Line Headers\ne.g., '1.', 'Q1', '(1)', '1,']
-        D --> E2[Tier 2: Body Paragraph Patterns\ne.g., '14. Neha and Priya...']
-        D --> E3[Tier 3: Filename Regex Fallback\ne.g., 'Screenshot_Q4.png']
+    subgraph Heuristics ["Heuristic Matching"]
+        D --> E1["Tier 1: Top-5 Line Headers<br>e.g. '1.', 'Q1', '(1)', '1,'"]
+        D --> E2["Tier 2: Body Paragraph Patterns<br>e.g. '14. Neha and Priya...'"]
+        D --> E3["Tier 3: Filename Regex Fallback<br>e.g. 'Screenshot_Q4.png'"]
     end
 
-    E1 --> F[Natural Numerical Key Evaluator]
+    E1 --> F["Natural Numerical Key Evaluator"]
     E2 --> F
     E3 --> F
 
-    F --> G[Sorted Sequence Generator]
-    G --> H[Layout & Canvas Engine\nNative / A4 Landscape / A4 Portrait]
-    H --> I[High-Quality Optimized PDF Output]
+    F --> G["Sorted Sequence Generator"]
+    G --> H["Layout & Canvas Engine<br>(Native / A4 Landscape / A4 Portrait)"]
+    H --> I["High-Quality Optimized PDF Output"]
 ```
 
 ---
